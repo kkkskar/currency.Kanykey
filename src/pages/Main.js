@@ -70,24 +70,24 @@ const Main = ({ currency, setImg }) => {
 
     return (
         <>
-            <main>
+            <main className='main'>
                 <div className='container'>
-                    <p>
+                    <p>Date:
                         {
                             res.date
                         }
                     </p>
-                    <p>
+                    <p>Base:
                         {
                             res.base
                         }
                     </p>
 
                     {
-                        res.rates && <p>{res?.rates[currency]}</p>
+                        res.rates && <p>Курс {currency+" : "}{res?.rates[currency]}RUB</p>
                     }
 
-                    <button onClick={getCurrency}><NavLink className='main__bnt' to={'/details'}>
+                    <button onClick={getCurrency} className='main__bnt'><NavLink to={'/details'}>
                         More
                     </NavLink></button>
                 </div>

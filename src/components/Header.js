@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 export const Header = ({setCurrency}) => {
     const[info, setInfo] = useState('')
     const handleInput =(e)=>{
-      setInfo(e.target.value);
+      setInfo(e.target.value)
     }
 
     const handleKeyDown =(e)=>{
